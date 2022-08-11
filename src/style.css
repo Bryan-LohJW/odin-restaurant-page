@@ -56,11 +56,13 @@ table {
 
 body {
     background-image: url(./background.png);
+    
 }
 
 #content {
     display: grid;
     grid-template-columns: 15rem 1fr;
+    gap: 2rem;
 
     width: 100vw;
     height: 100vh;
@@ -68,6 +70,10 @@ body {
 }
 
 .sidebar {
+    position: relative;
+}
+
+.sidebar-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -75,10 +81,11 @@ body {
     background-color: var(--sidebar-background);
     border: 1px solid transparent;
     padding: 1rem;
-    width: 100%;
+    width: fit-content;
     height: 100%;
-    position: sticky;
+    position: fixed;
 }
+
 
 .restaurant-name {
     text-align: center;
@@ -115,4 +122,49 @@ body {
 .sidebtn:active {
     transform: scale(1.1);
     transition: 100ms;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    padding: 2rem 10rem;
+}
+
+.page .title {
+    flex: 1 1 0;
+    background-color: aliceblue;
+
+    font-size: 5rem;
+    width: fit-content;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
+}
+
+.page .inner-content {
+    flex: 10 1 0;
+    background-color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.small-content {
+    flex: 1 1 0;
+
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 3rem;
+    width: 100%;
+    max-height: 300px;
+}
+
+.small-content p {
+    width: 40%
+}
+
+#macaroon {
+    width: 40%;
 }
