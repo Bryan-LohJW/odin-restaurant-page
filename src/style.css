@@ -46,6 +46,17 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* ------------------------------------------------------------------------- */
+:root {
+    --sidebar-background: rgba(200,162,200, 0.9);
+    --name-background: rgba(128,128,0 ,0.7);
+    --sidebar-button-background: rgb(245,245,245);
+    --sidebar-button-background-hover: rgb(200,200,200);
+}
+
+body {
+    background-image: url(./background.png);
+}
 
 #content {
     display: grid;
@@ -54,8 +65,6 @@ table {
     width: 100vw;
     height: 100vh;
     position: relative;
-
-    /* background-color: aliceblue; */
 }
 
 .sidebar {
@@ -63,15 +72,47 @@ table {
     flex-direction: column;
     gap: 2rem;
 
-    border: 1px solid black;
+    background-color: var(--sidebar-background);
+    border: 1px solid transparent;
     padding: 1rem;
     width: 100%;
     height: 100%;
     position: sticky;
 }
 
+.restaurant-name {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--sidebar-button-background);
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--name-background);
+    border-radius: 0.5rem;
+}
+
 .sidebtn {
     width: 100%;
     height: 3rem;
-    border: 1px solid blue;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    background-color: var(--sidebar-button-background);
+    font-size: 1.5rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 500ms;
+}
+
+.sidebtn:hover {
+    background-color: var(--sidebar-button-background-hover);
+    margin: 0.5rem 0rem;
+    font-size: 1.8rem;
+}
+
+.sidebtn:active {
+    transform: scale(1.1);
+    transition: 100ms;
 }
