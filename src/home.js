@@ -9,6 +9,7 @@ const home = () => {
 
     const innerContent = document.createElement('div');
     innerContent.classList.add('inner-content');
+    innerContent.classList.add('home');
 
     const contentone = document.createElement('div');
     contentone.classList.add('small-content');

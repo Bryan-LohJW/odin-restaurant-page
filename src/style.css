@@ -143,10 +143,13 @@ body {
     border-radius: 1rem;
 }
 
-.page .inner-content {
+.page .inner-content{
     flex: 10 1 0;
     background-color: aliceblue;
+    padding: 1rem;
+}
 
+.page .inner-content.home{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     width: fit-content;
@@ -164,4 +167,16 @@ body {
 
 .small-content p {
     width: 40%
+}
+
+
+
+.page .inner-content.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+}
+
+.left p {
+    font-size: 2rem;
 }
