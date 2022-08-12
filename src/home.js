@@ -1,6 +1,8 @@
 import macaroon from './macaroon.jpg';
+import clear from './clear';
 
-const home = () => {
+const homeFunc = () => {
+    clear();
     const page = document.querySelector('.page');
 
     const title = document.createElement('div');
@@ -51,4 +53,4 @@ const home = () => {
     page.appendChild(innerContent);
 }
 
-export default home;
+export default homeFunc;

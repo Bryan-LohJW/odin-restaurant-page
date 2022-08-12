@@ -1,5 +1,5 @@
-
-import home from './home';
+import homeFunc from './home';
+import aboutFunc from './about';
 
 const backbone = () => {
     const content = document.querySelector('#content');
@@ -18,11 +18,13 @@ const backbone = () => {
     home.classList.add('sidebtn');
     home.setAttribute('id','side-home');
     home.innerHTML = 'Home';
+    home.onclick = homeFunc;
 
     const about = document.createElement('div');
     about.classList.add('sidebtn');
     about.setAttribute('id','side-about');
     about.innerHTML = 'About Us';
+    about.onclick = aboutFunc;
 
     const menu = document.createElement('div');
     menu.classList.add('sidebtn');

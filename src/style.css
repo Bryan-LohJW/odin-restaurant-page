@@ -165,18 +165,13 @@ body {
     max-height: 300px;
 }
 
-.small-content p {
-    width: 40%
-}
-
-
-
 .page .inner-content.about{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: fit-content;
 }
 
-.left p {
+.left p,
+.small-content p {
     font-size: 2rem;
 }

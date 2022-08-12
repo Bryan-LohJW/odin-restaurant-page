@@ -1,7 +1,7 @@
 import backbone from './backbone';
-import home from './home';
-import about from './about';
+import homeFunc from './home';
+import aboutFunc from './about';
 import './style.css';
 
 backbone();
-about();
+homeFunc();
