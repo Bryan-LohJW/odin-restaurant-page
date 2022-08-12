@@ -147,8 +147,9 @@ body {
     flex: 10 1 0;
     background-color: aliceblue;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    width: fit-content;
 }
 
 .small-content {
@@ -157,14 +158,10 @@ body {
     display: flex;
     gap: 5rem;
     padding: 1rem 3rem;
-    width: 100%;
+    width: min(600px, 100%);
     max-height: 300px;
 }
 
 .small-content p {
     width: 40%
-}
-
-#macaroon {
-    width: 40%;
 }
